@@ -27,3 +27,20 @@ function weatherCheck(temp, raining) {
 }
 
 weatherCheck(currTemp, isRaining);
+//Temperature converter function here
+function tempConverter() {
+    //store temp in F
+    const tempF = prompt("Enter degrees in Farenheit: ");
+    //Store Temp in C
+    const tempC = Math.floor((tempF - 32) * (5/9));
+    console.log(`${tempF} degrees Farenheit is ${tempC} in Celsius.`);
+    //store temp in K
+    const tempK = tempC + 273.15;
+    console.log(`${tempC} degrees Celsius is ${tempK} in Kelvin.`);
+    //store forecast 
+    let todaysForecast = `The current temperature outside is ${tempF} degrees Fahrenheit, ${tempC} degrees Celcius, and ${tempK} degrees Kelvin.`;
+    //Output forcast to screen
+    console.log(todaysForecast);
+}
+
+tempConverter();

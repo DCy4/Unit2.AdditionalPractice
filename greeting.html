@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Personal Greeting</title>
+  </head>
+  <script>
+    let firstName = prompt("Enter your first name", "David");
+    let lastName = prompt("Enter your last name", "Calle");
+    let age = prompt("Enter your age", 31);
+    let city = prompt("Where are you from", "Miami");
+
+    let myInitials = firstName[0] + lastName[0];
+    //console.log(myInitials);
+
+    let nameLength = firstName.length;
+    console.log(`Your name is ${nameLength} characters long.`);
+
+    let fullNameCaps = firstName + " " + lastName;
+    //console.log(fullNameCaps.toUpperCase());
+
+    const personalGreeting = (firstName, lastName, age, city) => {
+      return `Hello! My I'm ${firstName} ${lastName}! I’m ${age}yrs old, and I’m from ${city}. Nice to meet you!`;
+    };
+
+    const initials = (firstName, lastName) => {
+      return `My initials are ${firstName[0]} ${lastName[0]}`;
+    };
+
+    const personalGreetingCaps = (firstName, lastName, age, city) => {
+      return `Hello! My I'm ${firstName} ${lastName}! I’m ${age}yrs old, and I’m from ${city}. Nice to meet you!`;
+    };
+
+    console.log(personalGreeting(firstName, lastName, age, city));
+    console.log(initials(firstName, lastName));
+  </script>
+
+  <body>
+    <h1>Open Console for a message!</h1>
+  </body>
+</html>
